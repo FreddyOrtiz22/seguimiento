@@ -44,6 +44,10 @@ public class Equipo {
 	@OneToMany(mappedBy = "equipo")
 	private List<DetalleRequerimiento> detallesReq;
 	
+	@OneToMany(mappedBy = "equipo")
+	private List<Repuesto> repuestos;
+	
+	
 	
 	//get and set
 	public Integer getId() {

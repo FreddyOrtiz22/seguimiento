@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
@@ -34,6 +36,12 @@ public class Proveedor {
 	
 	@Column(name = "prov_precio_compra")
 	private BigDecimal precioCompra;
+	
+	
+	@ManyToOne
+	@JoinColumn(name = "prov_repuesto_id")
+	private Repuesto repuesto;
+	
 	
 	//get and set
 	public Integer getId() {
