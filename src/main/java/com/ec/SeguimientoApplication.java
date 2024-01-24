@@ -6,13 +6,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.ec.entity.Usuario;
-import com.ec.service.UsuarioServiceI;
+import com.ec.service.IUsuarioService;
 
 @SpringBootApplication
 public class SeguimientoApplication implements CommandLineRunner{
 
 	@Autowired
-	private UsuarioServiceI usuarioServiceI;
+	private IUsuarioService iUsuarioService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SeguimientoApplication.class, args);

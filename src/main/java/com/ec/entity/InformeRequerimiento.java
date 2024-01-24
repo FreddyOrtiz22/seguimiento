@@ -29,6 +29,7 @@ public class InformeRequerimiento {
 	@Column(name = "info_observacion")
 	private String observacion;
 
+	//------Relaciones-------------
 	
 	@OneToOne
 	@JoinColumn(name = "info_detalle_id")

@@ -40,6 +40,7 @@ public class Equipo {
 	@Column(name = "equi_precio_reparacion")
 	private BigDecimal precioReparacion;
 
+	//-------RELACIONES
 	
 	@OneToMany(mappedBy = "equipo")
 	private List<DetalleRequerimiento> detallesReq;
@@ -48,7 +49,26 @@ public class Equipo {
 	private List<Repuesto> repuestos;
 	
 	
+	//--------GET Y SET relaciones
 	
+	
+	
+	public List<DetalleRequerimiento> getDetallesReq() {
+		return detallesReq;
+	}
+
+	public void setDetallesReq(List<DetalleRequerimiento> detallesReq) {
+		this.detallesReq = detallesReq;
+	}
+
+	public List<Repuesto> getRepuestos() {
+		return repuestos;
+	}
+
+	public void setRepuestos(List<Repuesto> repuestos) {
+		this.repuestos = repuestos;
+	}
+
 	//get and set
 	public Integer getId() {
 		return id;

@@ -30,14 +30,14 @@ public class Requerimiento {
 	@Column(name = "req_precio_final")
 	private BigDecimal precioFinal;
 
+	//----------relaciones
+	
 	@ManyToOne
 	@JoinColumn(name = "req_usuario_id")
 	private Usuario usuario;
 	
 	@OneToMany(mappedBy = "requerimiento")
 	private List<DetalleRequerimiento> detallesReq;
-	
-	
 	
 	//get y set ---- relaciones
 	

@@ -10,7 +10,7 @@ import jakarta.transaction.Transactional;
 
 @Repository
 @Transactional
-public class UsuariosRepoImpl implements UsuariosRepoI {
+public class UsuariosRepoImpl implements IUsuarioRepo {
 
 	@PersistenceContext
 	private EntityManager entityManager;
@@ -39,5 +39,8 @@ public class UsuariosRepoImpl implements UsuariosRepoI {
 		this.entityManager.merge(usuario);
 	}
 
-	
+	public void elimiimar() {
+		
+	}
+
 }

@@ -66,6 +66,15 @@ public class DetalleRequerimiento {
 		this.requerimiento = requerimiento;
 	}
 
+
+	public Equipo getEquipo() {
+		return equipo;
+	}
+
+	public void setEquipo(Equipo equipo) {
+		this.equipo = equipo;
+	}
+
 	// get y set
 	public Integer getId() {
 		return id;

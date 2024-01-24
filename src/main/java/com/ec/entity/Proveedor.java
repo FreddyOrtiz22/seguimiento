@@ -37,12 +37,22 @@ public class Proveedor {
 	@Column(name = "prov_precio_compra")
 	private BigDecimal precioCompra;
 	
+	//-------Relaciones
 	
 	@ManyToOne
 	@JoinColumn(name = "prov_repuesto_id")
 	private Repuesto repuesto;
 	
+	//------Get y set relaciones
 	
+	public Repuesto getRepuesto() {
+		return repuesto;
+	}
+
+	public void setRepuesto(Repuesto repuesto) {
+		this.repuesto = repuesto;
+	}
+
 	//get and set
 	public Integer getId() {
 		return id;

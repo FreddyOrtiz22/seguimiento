@@ -40,6 +40,9 @@ public class Repuesto {
 	@Column(name = "repu_cantidad")
 	private BigDecimal cantidad;
 	
+	
+	//-----Relaciones
+	
 	@ManyToOne
 	@JoinColumn(name = "repu_equipo_id")
 	private Equipo equipo;
@@ -48,8 +51,28 @@ public class Repuesto {
 	@OneToMany(mappedBy = "repuesto")
 	private List<Proveedor> proveedor;
 	
+	//-------Get y set relaciones
+	
+	public Equipo getEquipo() {
+		return equipo;
+	}
+
+	public void setEquipo(Equipo equipo) {
+		this.equipo = equipo;
+	}
+
+	public List<Proveedor> getProveedor() {
+		return proveedor;
+	}
+
+	public void setProveedor(List<Proveedor> proveedor) {
+		this.proveedor = proveedor;
+	}
+	
 	
 	//get and set
+
+	
 
 	public Integer getId() {
 		return id;

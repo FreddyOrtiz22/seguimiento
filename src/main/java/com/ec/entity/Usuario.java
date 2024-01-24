@@ -45,15 +45,14 @@ public class Usuario {
 	
 	@Column(name="usua_estado")
 	private String estado;
-
+	
+	//-------Relaciones
+	
 	@OneToMany(mappedBy = "usuario")
 	private List<Requerimiento> requerimientos;
-	
-	
-	
-	
-	
+
 	// get y set ---- relaciones
+	
 	public List<Requerimiento> getRequerimientos() {
 		return requerimientos;
 	}
@@ -61,8 +60,6 @@ public class Usuario {
 	public void setRequerimientos(List<Requerimiento> requerimientos) {
 		this.requerimientos = requerimientos;
 	}
-
-
 
 	
 	//get and set
