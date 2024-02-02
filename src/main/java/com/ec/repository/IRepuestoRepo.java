@@ -4,9 +4,9 @@ import com.ec.entity.Repuesto;
 
 public interface IRepuestoRepo {
 
-	void crearRepuesto(Repuesto proveedor);
+	void crearRepuesto(Repuesto repuesto);
 	Repuesto buscarRepuesto(Integer id);
 	void borrarRepuesto(Integer id);
-	void actualizarRepuesto(Repuesto proveedor);
+	void actualizarRepuesto(Repuesto repuesto);
 	
 }

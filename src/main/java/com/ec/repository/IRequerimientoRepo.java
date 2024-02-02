@@ -5,9 +5,9 @@ import com.ec.entity.Requerimiento;
 
 public interface IRequerimientoRepo {
 
-	void crearRequerimiento(Requerimiento proveedor);
+	void crearRequerimiento(Requerimiento requerimiento);
 	Requerimiento buscarRequerimiento(Integer id);
 	void borrarRequerimiento(Integer id);
-	void actualizarRequerimiento(Requerimiento proveedor);
+	void actualizarRequerimiento(Requerimiento requerimiento);
 	
 }

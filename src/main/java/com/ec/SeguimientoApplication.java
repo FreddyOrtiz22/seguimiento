@@ -6,13 +6,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.ec.entity.Usuario;
+import com.ec.service.IGestorUsuarios;
 import com.ec.service.IUsuarioService;
 
 @SpringBootApplication
 public class SeguimientoApplication implements CommandLineRunner{
 
 	@Autowired
-	private IUsuarioService iUsuarioService;
+	private	IGestorUsuarios iGestorUsuarios;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SeguimientoApplication.class, args);
@@ -23,20 +24,9 @@ public class SeguimientoApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("imp");
+		//this.iGestorUsuarios.ingresarUsuario("gonzalo", "ortiz", "1715078984", "email.com", "0983193863", "UCE", "tecnico");
 		
-		Usuario u=new Usuario();
-		u.setApellido("Ortiz");
-		u.setCedula("1234567");
-		u.setTipo("Tecnico");
-		
-		//this.usuarioServiceI.guardarUsuario(u);
-		
-		//this.usuarioServiceI.borrarUsuario(3);
-		
-		//Usuario user = this.usuarioServiceI.buscarUsuario(1);
-		//System.out.println(user);
-		
+		System.out.println(this.iGestorUsuarios.buscarTodosUsuario());
 		
 	}
 

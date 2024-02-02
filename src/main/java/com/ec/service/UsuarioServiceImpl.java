@@ -1,5 +1,7 @@
 package com.ec.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,6 +40,17 @@ public class UsuarioServiceImpl implements IUsuarioService{
 
 	}
 
+	@Override
+	public List<Usuario> buscarTodosUsuario() {
+		// TODO Auto-generated method stub
+		return this.iUsuarioRepo.buscarTodosUsuarios();
+	}
+
+	
+	
+	
+	
+	
 	
 	
 	

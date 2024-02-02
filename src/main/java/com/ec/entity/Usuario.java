@@ -46,6 +46,12 @@ public class Usuario {
 	@Column(name="usua_estado")
 	private String estado;
 	
+	@Column(name = "usua_direccion")
+	private String direccion;
+	
+	@Column (name = "usua_numero_tecnico")
+	private String numeroTecnico;
+	
 	//-------Relaciones
 	
 	@OneToMany(mappedBy = "usuario")
@@ -135,12 +141,29 @@ public class Usuario {
 		this.estado = estado;
 	}
 
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public String getNumeroTecnico() {
+		return numeroTecnico;
+	}
+
+	public void setNumeroTecnico(String numeroTecnico) {
+		this.numeroTecnico = numeroTecnico;
+	}
+
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", cedula=" + cedula
 				+ ", contrasena=" + contrasena + ", telefono=" + telefono + ", tipo=" + tipo + ", email=" + email
-				+ ", estado=" + estado + "]";
+				+ ", estado=" + estado + ", direccion=" + direccion + ", numeroTecnico=" + numeroTecnico + "]";
 	}
+
 	
 	
 	

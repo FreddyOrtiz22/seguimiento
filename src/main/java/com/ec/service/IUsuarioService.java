@@ -1,5 +1,7 @@
 package com.ec.service;
 
+import java.util.List;
+
 import com.ec.entity.Usuario;
 
 public interface IUsuarioService {
@@ -7,4 +9,5 @@ public interface IUsuarioService {
 	Usuario buscarUsuario(Integer id);
 	void borrarUsuario(Integer id);
 	void actualizarUsuario(Usuario usuario);
+	List<Usuario> buscarTodosUsuario();
 }
